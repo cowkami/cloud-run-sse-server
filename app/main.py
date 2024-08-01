@@ -17,6 +17,6 @@ async def dummy_streamer():
         await asyncio.sleep(0.5)
 
 
-@app.get("/items")
+@app.post("/items")
 async def read_item():
     return StreamingResponse(dummy_streamer())
